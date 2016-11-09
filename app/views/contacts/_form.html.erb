@@ -1,0 +1,35 @@
+<% if @contact.errors.any? %>
+    <div id="error_explanation">
+        <h2>
+            Błędy:
+        </h2>
+        <ul>
+            <% @contact.errors.messages.each do |attr, msg| %>
+                <% msg.each do |val| %>
+                    <li><%= val %></li>
+                <% end %>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+
+<%= form_for @contact do |f| %>
+    <p>
+        <%= f.label :name, 'Imię' %><br>
+        <%= f.text_field :name, class: 'form-control' %>
+    </p>
+
+    <p>
+        <%= f.label :surname, 'Nazwisko' %><br>
+        <%= f.text_field :surname, class: 'form-control' %>
+    </p>
+
+    <p>
+        <%= f.label :number, 'Numer telefonu' %><br>
+        <%= f.text_field :phone, class: 'form-control' %>
+    </p>
+
+    <p>
+        <%= f.submit 'Zapisz kontakt', class: 'btn btn-primary' %>
+    </p>
+<% end %>

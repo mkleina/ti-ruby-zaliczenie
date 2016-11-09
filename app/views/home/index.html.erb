@@ -1,0 +1,17 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Kontakty</a>
+    </div>
+  </div>
+</nav>
+
+<h1>Prosta lista kontaktów telefonicznych</h1>
+<p>Wybierz jedną z opcji poniżej</p>
+
+<%= link_to 'Lista kontaktów', {controller: 'contacts'}, class: 'btn btn-primary' %>
+<%= link_to 'Szukaj kontaktów', {controller: 'searches'}, class: 'btn btn-success' %>
+<%= link_to 'Nowy kontakt', new_contact_path, class: 'btn btn-default' %>
+
+<hr>
+<p>Autor: Mateusz Kleina</p>

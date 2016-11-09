@@ -1,0 +1,14 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to '< Strona główna', root_path, class: 'navbar-brand' %>
+      <%= link_to '< Lista kontaktów', contacts_path, class: 'navbar-brand' %>
+    </div>
+  </div>
+</nav>
+
+<h1>Edycja kontaktu</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Wstecz', contacts_path %>

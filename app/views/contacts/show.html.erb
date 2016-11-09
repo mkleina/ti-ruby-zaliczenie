@@ -1,0 +1,21 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to '< Strona główna', root_path, class: 'navbar-brand' %>
+      <%= link_to '< Lista kontaktów', contacts_path, class: 'navbar-brand' %>
+    </div>
+  </div>
+</nav>
+
+<h1>Podgląd kontaktu</h1>
+
+<p>
+  <strong>Osoba:</strong><br>
+  <big><%= @contact.name %> <%= @contact.surname %></big>
+</p>
+
+<p>
+  <strong>Numer telefonu:</strong><br>
+  <big><%= @contact.phone %></big>
+</p>
+
