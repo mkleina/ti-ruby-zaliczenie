@@ -1,0 +1,31 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to '< Strona główna', root_path, class: 'navbar-brand' %>
+      <%= link_to '< Lista przychodni', clinics_path, class: 'navbar-brand' %>
+    </div>
+  </div>
+</nav>
+
+<h1>Podgląd kontaktu</h1>
+
+<p>
+  <strong>Nazwa przychodni:</strong><br>
+  <big><%= @clinic.name %></big>
+</p>
+
+<p>
+  <strong>Miasto:</strong><br>
+  <big><%= @clinic.city %></big>
+</p>
+
+<p>
+  <strong>Adres:</strong><br>
+  <big><%= @clinic.address %></big>
+</p>
+
+<p>
+  <strong>Numer telefonu przychodni:</strong><br>
+  <big><%= @clinic.phone %></big>
+</p>
+

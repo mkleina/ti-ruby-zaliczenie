@@ -9,6 +9,7 @@
 <h1> Szukaj kontaktów</h1>
 
 <%= form_tag("/search/query", method: "get") do %>
+    <h2>Lekarz</h2>
     <p>
         <%= label_tag(:name, 'Imię') %><br>
         <%= text_field_tag(:name, '', class: 'form-control') %>
@@ -19,7 +20,29 @@
         <%= text_field_tag(:surname, '', class: 'form-control') %>
     </p>
 
+    <h2>Powiązana przychodnia</h2>
+    <p>
+        <%= label_tag(:clinic_name, 'Nazwa przychodni') %><br>
+        <%= text_field_tag(:clinic_name, '', class: 'form-control') %>
+    </p>
+
+    <p>
+        <%= label_tag(:clinic_city, 'Miasto przychodni') %><br>
+        <%= text_field_tag(:clinic_city, '', class: 'form-control') %>
+    </p>
+
+    <p>
+        <%= label_tag(:clinic_address, 'Adres przychodni') %><br>
+        <%= text_field_tag(:clinic_address, '', class: 'form-control') %>
+    </p>
+
+    <p>
+        <%= label_tag(:clinic_phone, 'Numer telefonu przychodni') %><br>
+        <%= text_field_tag(:clinic_phone, '', class: 'form-control') %>
+    </p>
+
     <p>
         <%= submit_tag('Znajdź kontakty', class: 'btn btn-primary') %>
     </p>
+
 <% end %>

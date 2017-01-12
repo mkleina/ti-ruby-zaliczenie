@@ -1,0 +1,40 @@
+<% if @clinic.errors.any? %>
+    <div id="error_explanation">
+        <h2>
+            Błędy:
+        </h2>
+        <ul>
+            <% @clinic.errors.messages.each do |attr, msg| %>
+                <% msg.each do |val| %>
+                    <li><%= val %></li>
+                <% end %>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+
+<%= form_for @clinic do |f| %>
+    <p>
+        <%= f.label :name, 'Nazwa przychodni' %><br>
+        <%= f.text_field :name, class: 'form-control' %>
+    </p>
+
+    <p>
+        <%= f.label :address, 'Adres przychodni' %><br>
+        <%= f.text_field :address, class: 'form-control' %>
+    </p>
+
+    <p>
+        <%= f.label :city, 'Miasto' %><br>
+        <%= f.text_field :city, class: 'form-control' %>
+    </p>
+
+    <p>
+        <%= f.label :phone, 'Telefon' %><br>
+        <%= f.text_field :phone, class: 'form-control' %>
+    </p>
+
+    <p>
+        <%= f.submit 'Zapisz przychodnię', class: 'btn btn-primary' %>
+    </p>
+<% end %>

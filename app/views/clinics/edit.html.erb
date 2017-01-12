@@ -2,12 +2,13 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <%= link_to '< Strona główna', root_path, class: 'navbar-brand' %>
+      <%= link_to '< Lista przychodni', clinics_path, class: 'navbar-brand' %>
     </div>
   </div>
 </nav>
 
-<h1>Dodawanie nowego kontaktu</h1>
+<h1>Edycja przychodni</h1>
 
-<%= render 'contact_form' %>
+<%= render 'clinic_form' %>
 
-
+<%= link_to 'Wstecz', clinics_path %>

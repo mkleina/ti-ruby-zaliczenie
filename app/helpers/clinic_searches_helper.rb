@@ -1,0 +1,2 @@
+module ClinicSearchesHelper
+end

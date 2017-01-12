@@ -30,6 +30,14 @@
     </p>
 
     <p>
+        @contact.methods
+    </p>
+
+    <p>
+        <%= collection_select(:contact, :clinic_id, Clinic.all, :id, :full_name) %>
+    </p>
+
+    <p>
         <%= f.submit 'Zapisz kontakt', class: 'btn btn-primary' %>
     </p>
 <% end %>

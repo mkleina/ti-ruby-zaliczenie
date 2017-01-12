@@ -6,12 +6,18 @@
   </div>
 </nav>
 
-<h1>Prosta lista kontaktów telefonicznych</h1>
+<h1>Prosta lista kontaktów medycznych</h1>
 <p>Wybierz jedną z opcji poniżej</p>
 
+<h2>Kontakty</h2>
 <%= link_to 'Lista kontaktów', {controller: 'contacts'}, class: 'btn btn-primary' %>
 <%= link_to 'Szukaj kontaktów', {controller: 'searches'}, class: 'btn btn-success' %>
 <%= link_to 'Nowy kontakt', new_contact_path, class: 'btn btn-default' %>
+
+<h2>Przychodnie</h2>
+<%= link_to 'Lista przychodni', {controller: 'clinics'}, class: 'btn btn-primary' %>
+<%= link_to 'Szukaj przychodni', {controller: 'clinic_searches'}, class: 'btn btn-success' %>
+<%= link_to 'Nowa przychodnia', new_clinic_path, class: 'btn btn-default' %>
 
 <hr>
 <p>Autor: Mateusz Kleina</p>
