@@ -1,0 +1,30 @@
+<% if @spec.errors.any? %>
+    <div id="error_explanation">
+        <h2>
+            Błędy:
+        </h2>
+        <ul>
+            <% @spec.errors.messages.each do |attr, msg| %>
+                <% msg.each do |val| %>
+                    <li><%= val %></li>
+                <% end %>
+            <% end %>
+        </ul>
+    </div>
+<% end %>
+
+<%= form_for @spec do |f| %>
+    <p>
+        <%= f.label :name, 'Nazwa specjalizacji' %><br>
+        <%= f.text_field :name, class: 'form-control' %>
+    </p>
+
+    <p>
+        <%= f.label :description, 'Opis specjalizacji' %><br>
+        <%= f.text_field :description, class: 'form-control' %>
+    </p>
+
+    <p>
+        <%= f.submit 'Zapisz specjalizację', class: 'btn btn-primary' %>
+    </p>
+<% end %>

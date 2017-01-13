@@ -41,8 +41,21 @@
         <%= text_field_tag(:clinic_phone, '', class: 'form-control') %>
     </p>
 
+    <h2>Powiązana specjalizacja medyczna</h2>
+
+    <p>
+        <%= label_tag(:spec_name, 'Nazwa specjalizacji') %><br>
+        <%= text_field_tag(:spec_name, '', class: 'form-control') %>
+    </p>
+
+    <p>
+        <%= label_tag(:spec_description, 'Opis specjalizacji') %><br>
+        <%= text_field_tag(:spec_description, '', class: 'form-control') %>
+    </p>
+
     <p>
         <%= submit_tag('Znajdź kontakty', class: 'btn btn-primary') %>
     </p>
+
 
 <% end %>

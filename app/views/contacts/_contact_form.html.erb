@@ -25,16 +25,18 @@
     </p>
 
     <p>
-        <%= f.label :number, 'Numer telefonu' %><br>
+        <%= f.label :phone, 'Numer telefonu' %><br>
         <%= f.text_field :phone, class: 'form-control' %>
     </p>
 
     <p>
-        @contact.methods
+        <%= f.label :clinic_id, 'Przychodnia' %><br>
+        <%= collection_select(:contact, :clinic_id, Clinic.all, :id, :full_name) %>
     </p>
 
     <p>
-        <%= collection_select(:contact, :clinic_id, Clinic.all, :id, :full_name) %>
+        <%= f.label :spec_id, 'Specjalizacja medyczna' %><br>    
+        <%= collection_select(:contact, :spec_id, Spec.all, :id, :name) %>
     </p>
 
     <p>

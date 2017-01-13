@@ -16,6 +16,7 @@
     <th>Osoba</th>
     <th>Numer telefonu</th>
     <th>Przychodnia</th>
+    <th>Specjalizacja</th>
     <th colspan="3"></th>
   </tr>
 
@@ -24,6 +25,7 @@
       <td><%= contact.name %> <%= contact.surname %></td>
       <td><%= contact.phone %></td>
       <td><%= contact.clinic.full_name %></td>
+      <td><%= contact.spec.name %></td>
       <td><%= link_to 'Pokaż', contact_path(contact) %></td>
       <td><%= link_to 'Edytuj', edit_contact_path(contact) %></td>
       <td><%= link_to 'Usuń', contact_path(contact),

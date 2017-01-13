@@ -1,0 +1,14 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to '< Strona główna', root_path, class: 'navbar-brand' %>
+      <%= link_to '< Lista przychodni', specs_path, class: 'navbar-brand' %>
+    </div>
+  </div>
+</nav>
+
+<h1>Edycja specjalizacji</h1>
+
+<%= render 'spec_form' %>
+
+<%= link_to 'Wstecz', specs_path %>
