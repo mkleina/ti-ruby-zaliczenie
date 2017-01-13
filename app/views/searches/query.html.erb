@@ -26,9 +26,9 @@
       <td><%= contact.clinic.full_name %></td>
       <td><%= contact.clinic.phone %></td>
       <td><%= contact.spec.name %></td>
-      <td><%= link_to 'Pokaż', contact_path(contact) %></td>
-      <td><%= link_to 'Edytuj', edit_contact_path(contact) %></td>
-      <td><%= link_to 'Usuń', contact_path(contact),
+      <td><%= link_to raw("<span class='glyphicon glyphicon-eye-open'></span> Pokaż"), contact_path(contact) %></td>
+      <td><%= link_to raw("<span class='glyphicon glyphicon-edit'></span> Edytuj"), edit_contact_path(contact) %></td>
+      <td><%= link_to raw("<span class='glyphicon glyphicon-remove'></span> Usuń"), contact_path(contact),
               method: :delete,
               data: { confirm: 'Czy na pewno?' } %>
     </td>

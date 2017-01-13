@@ -1,5 +1,5 @@
 class Clinic < ApplicationRecord
-    has_many :contacts
+    has_many :contacts, :dependent => :delete_all
     validates :name, presence: { message: 'Nazwa jest wymagana' }
     validates :city, presence: { message: 'Miasto jest wymagane' }
     validates :address, presence: { message: 'Adres jest wymagany' }

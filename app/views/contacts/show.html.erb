@@ -10,7 +10,7 @@
 <h1>Podgląd kontaktu</h1>
 
 <p>
-  <strong>Osoba:</strong><br>
+  <strong>Lekarz:</strong><br>
   <big><%= @contact.name %> <%= @contact.surname %></big>
 </p>
 
@@ -19,3 +19,22 @@
   <big><%= @contact.phone %></big>
 </p>
 
+<p>
+  <strong>Nazwa przychodni:</strong><br>
+  <big><%= @contact.clinic.full_name %></big>
+</p>
+
+<p>
+  <strong>Numer telefonu przychodni:</strong><br>
+  <big><%= @contact.clinic.phone %></big>
+</p>
+
+<p>
+  <strong>Specjalizacja medyczna:</strong><br>
+  <big><%= @contact.spec.name %></big>
+</p>
+
+<p>
+  <strong>Opis specjalizacji medycznej:</strong><br>
+  <big><%= @contact.spec.description %></big>
+</p>

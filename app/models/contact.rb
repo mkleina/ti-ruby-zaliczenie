@@ -1,6 +1,6 @@
 class Contact < ApplicationRecord
-    belongs_to :clinic, :dependent => :delete, optional: true
-    belongs_to :spec, :dependent => :delete, optional: true
+    belongs_to :clinic, optional: true
+    belongs_to :spec, optional: true
     validates :name, presence: { message: 'Imię jest wymagane' }
     validates :surname, presence: false
     validates :phone,

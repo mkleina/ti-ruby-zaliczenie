@@ -9,6 +9,7 @@
 
 <h1>Lista przychodni</h1>
 
+<% unless @clinics.blank? %>
 <table class="table table-striped">
   <tr>
     <th>Przychodnia</th>
@@ -20,14 +21,15 @@
     <tr>
       <td><%= clinic.full_name %></td>
       <td><%= clinic.phone %></td>
-      <td><%= link_to 'Pokaż', clinic_path(clinic) %></td>
-      <td><%= link_to 'Edytuj', edit_clinic_path(clinic) %></td>
-      <td><%= link_to 'Usuń', clinic_path(clinic),
+      <td><%= link_to raw("<span class='glyphicon glyphicon-eye-open'></span> Pokaż"), clinic_path(clinic) %></td>
+      <td><%= link_to raw("<span class='glyphicon glyphicon-edit'></span> Edytuj"), edit_clinic_path(clinic) %></td>
+      <td><%= link_to raw("<span class='glyphicon glyphicon-remove'></span> Usuń"), clinic_path(clinic),
               method: :delete,
               data: { confirm: 'Czy na pewno?' } %>
     </td>
     </tr>
   <% end %>
 </table>
-
-
+<% else %>
+<h2>Nie znaleziono żadnych przychodni o wybranych kryteriach</h2>
+<% end %>

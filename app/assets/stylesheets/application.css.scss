@@ -1,2 +1,31 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  margin: 50px;
+  background: #344;
+  color: #DEE;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > {
+  td {
+    background-color: #566;
+  }
+  th {
+    background-color: #b00;
+  }
+}
+
+a {
+  color: #DBB;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #D88;
+  text-decoration: none;
+}
+
+select {
+  color: #344;
+}

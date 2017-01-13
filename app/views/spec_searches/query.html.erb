@@ -9,6 +9,7 @@
 
 <h1>Lista specjalizacji</h1>
 
+<% unless @specs.blank? %>
 <table class="table table-striped">
   <tr>
     <th>Nazwa specjalizacji</th>
@@ -20,14 +21,15 @@
     <tr>
       <td><%= spec.name %></td>
       <td><%= spec.description %></td>
-      <td><%= link_to 'Pokaż', spec_path(spec) %></td>
-      <td><%= link_to 'Edytuj', edit_spec_path(spec) %></td>
-      <td><%= link_to 'Usuń', spec_path(spec),
+      <td><%= link_to raw("<span class='glyphicon glyphicon-eye-open'></span> Pokaż"), spec_path(spec) %></td>
+      <td><%= link_to raw("<span class='glyphicon glyphicon-edit'></span> Edytuj"), edit_spec_path(spec) %></td>
+      <td><%= link_to raw("<span class='glyphicon glyphicon-remove'></span> Usuń"), spec_path(spec),
               method: :delete,
               data: { confirm: 'Czy na pewno?' } %>
     </td>
     </tr>
   <% end %>
 </table>
-
-
+<% else %>
+<h2>Nie znaleziono żadnych specjalizacji o wybranych kryteriach</h2>
+<% end %>
