@@ -11,6 +11,6 @@ class Contact < ApplicationRecord
     validates :spec_id, presence: { message: 'Specjalizacja medyczna jest wymagana' }
     
     def full_name
-        "#{name}: #{surname}"
+        "#{name} #{surname}"
     end
 end
